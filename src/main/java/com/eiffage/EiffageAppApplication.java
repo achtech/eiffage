@@ -18,7 +18,7 @@ public class EiffageAppApplication {
 		ApplicationContext ctx= SpringApplication.run(EiffageAppApplication.class, args);
 		RolesRepository roleRepo = ctx.getBean(RolesRepository.class);
 		UsersRepository userRepo = ctx.getBean(UsersRepository.class);
-	/*	Roles r1 = roleRepo.save(new Roles("ADMIN", "admin de l'app"));
+		Roles r1 = roleRepo.save(new Roles("ADMIN", "admin de l'app"));
 		Roles r2 = roleRepo.save(new Roles("CHEF_CHANTIER", "admin de l'app"));
 		Roles r3 = roleRepo.save(new Roles("SUPERVISEUR", "admin de l'app"));
 		Roles r4 = roleRepo.save(new Roles("OUVRIER", "admin de l'app"));
@@ -27,7 +27,7 @@ public class EiffageAppApplication {
 		userRepo.save(new Users("b@gmail.com","CIN2",r2));
 		userRepo.save(new Users("c@gmail.com","CIN3",r3));
 		userRepo.save(new Users("d@gmail.com","CIN4",r4));
-	*/	
+	
 		List<Roles> roles = roleRepo.findAll();
 		List<Users> users = userRepo.findAll();
 		

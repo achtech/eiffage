@@ -23,7 +23,7 @@ public class Roles {
 	}
 	public Roles() {
 		super();
-		// TODO Auto-generated constructor stub
+	
 	}
 	public String getRole() {
 		return role;
