@@ -1,0 +1,46 @@
+package com.eiffage.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor  
+public class Roles {
+
+	@Id
+	private String role; 
+	private String description;
+	public Roles(String role, String description) {
+		super();
+		this.role = role;
+		this.description = description;
+	}
+	public Roles() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	@Override
+	public String toString() {
+		return "Roles [role=" + role + ", description=" + description + "]";
+	}
+	
+	
+}
