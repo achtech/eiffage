@@ -33,8 +33,8 @@ public class Tasks {
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name="TASKS_PROJECT")
-	private List<Project> project;
-	public Tasks(Long id, String title, String description, Users assignTo, Status status, List<Project> project) {
+	private List<Projects> project;
+	public Tasks(Long id, String title, String description, Users assignTo, Status status, List<Projects> project) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -42,7 +42,7 @@ public class Tasks {
 		this.assignTo = assignTo;
 		this.status = status;
 		if(this.project == null) {
-			this.project = new ArrayList<Project>();
+			this.project = new ArrayList<Projects>();
 		}
 		this.project.addAll(project);
 		
@@ -99,12 +99,12 @@ public class Tasks {
 	}
 
 
-	public List<Project> getProject() {
+	public List<Projects> getProject() {
 		return project;
 	}
 
 
-	public void setProject(List<Project> project) {
+	public void setProject(List<Projects> project) {
 		this.project = project;
 	}
 

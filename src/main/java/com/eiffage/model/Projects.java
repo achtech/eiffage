@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 	@Data
 	@NoArgsConstructor
 	@AllArgsConstructor  
-	public class Project {
+	public class Projects {
 		@Id
 		private Long id; 
 		private String description;
@@ -26,10 +26,10 @@ import lombok.NoArgsConstructor;
 		protected LocalDateTime timeStamp;
 		
 		@ManyToMany(fetch = FetchType.EAGER)
-		@JoinTable(name="PROJECT_TEAMS")
+		@JoinTable(name="PROJECTS_TEAMS")
 		private List<Teams> teams;
 
-		public Project(Long id, String description, String title, LocalDateTime timeStamp, List<Teams> team) {
+		public Projects(Long id, String description, String title, LocalDateTime timeStamp, List<Teams> team) {
 			super();
 			this.id = id;
 			this.description = description;
@@ -41,7 +41,7 @@ import lombok.NoArgsConstructor;
 			this.teams.addAll(team);
 		}
 
-		public Project() {
+		public Projects() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
@@ -88,7 +88,7 @@ import lombok.NoArgsConstructor;
 
 		@Override
 		public String toString() {
-			return "Project [id=" + id + ", Title=" + title + ", Description=" + description + ", TimeStamp=" +timeStamp
+			return "Projects [id=" + id + ", Title=" + title + ", Description=" + description + ", TimeStamp=" +timeStamp
 					+  ",team=" + teams + "]";
 		}
 		
