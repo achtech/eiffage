@@ -7,11 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.eiffage.model.Files;
-import com.eiffage.model.Projects;
 import com.eiffage.repo.FilesRepository;
-import com.eiffage.repo.ProjectsRepository;
 import com.eiffage.service.FilesService;
-import com.eiffage.service.ProjectsService;
 
 
 import lombok.RequiredArgsConstructor;

@@ -11,7 +11,7 @@ import com.eiffage.model.Files;
 
 
 public interface FilesRepository extends JpaRepository<Files, Long> {
-	public Files findByTiltle(String Title);
+	public Files findByTitle(String Title);
 	public Files findByPath(String Path);
 	
 
